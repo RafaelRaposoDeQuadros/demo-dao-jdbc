@@ -11,13 +11,12 @@ public class Program {
 
     public static void main(String[] args) {
 
-        var obj = new Department(1,"Books");
-
-        var seller= new Seller(21,"Bob","bob@gmail.com",new Date(),3000.0,obj);
 
         SellerDao sellerDao =  DaoFactory.createSallerDao();
 
+        Seller seller = sellerDao.findBYId(3);
+
         System.out.println(seller);
-        System.out.println(obj);
+
     }
 }
