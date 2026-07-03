@@ -107,7 +107,7 @@ public class SellerDaoJDBC implements SellerDao {
         finally {
             DB.closeStatement(st);
         }
-    };
+    }
 
     @Override
     public Seller findBYId(Integer id){
@@ -167,8 +167,6 @@ public class SellerDaoJDBC implements SellerDao {
                             + "FROM seller INNER JOIN department "
                             + "ON seller.DepartmentId = department.Id "
                             + "ORDER BY Name ");
-
-
 
             rs =st.executeQuery();
 
